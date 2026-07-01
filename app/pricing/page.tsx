@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 const TIERS = [
   {
     name: 'Standard Figure',
-    starting: '$60',
+    starting: '$100',
     unit: 'per figure',
     description:
-      'Single view technical figure prepared from a clear sketch, photograph, or CAD reference with standard reference numbering.',
+      'Single-view technical figure prepared from a clear sketch, photograph, or CAD reference with standard reference numbering.',
     inclusions: [
       'One view per figure',
       'Reference numerals and leader lines',
@@ -27,12 +27,12 @@ const TIERS = [
   },
   {
     name: 'Complex Figure',
-    starting: '$110',
+    starting: '$300',
     unit: 'per figure',
     description:
-      'Multi view assemblies, cross sections, and figures requiring extensive callouts, surface shading, or hidden line work.',
+      'Multi-view assemblies, cross-sections, and figures requiring extensive callouts, surface shading, or hidden-line work.',
     inclusions: [
-      'Multi view or sectional figure',
+      'Multi-view or sectional figure',
       'Detailed callouts and reference numbering',
       'Two revision rounds included',
       'PDF, PNG, and editable source files',
@@ -42,15 +42,15 @@ const TIERS = [
   },
   {
     name: 'Design Patent Set',
-    starting: '$420',
-    unit: 'seven view set',
+    starting: '$550',
+    unit: 'seven-view set',
     description:
-      'Complete seven view design patent submission with broken lines for unclaimed environment and proper surface treatment.',
+      'Complete seven-view design patent submission with broken lines for unclaimed environment and proper surface treatment.',
     inclusions: [
       'Front, rear, top, bottom, left, right, perspective',
       'Broken line treatment',
       'Surface shading and stippling as required',
-      'Filing ready PDF sheet set',
+      'Filing-ready PDF sheet set',
     ],
     suited: 'Best for ornamental claims on physical products.',
   },
@@ -206,7 +206,7 @@ export default function PricingPage() {
                 },
                 {
                   k: 'Geometric Detail',
-                  v: 'Surface texture, threading, internal mechanisms, and hidden line work.',
+                  v: 'Surface texture, threading, internal mechanisms, and hidden-line work.',
                 },
                 {
                   k: 'Source Quality',
@@ -214,7 +214,7 @@ export default function PricingPage() {
                 },
                 {
                   k: 'Rush Multiplier',
-                  v: '48 hour and 72 hour schedules carry a 1.4x and 1.25x adjustment respectively.',
+                  v: '48-hour and 72-hour schedules carry a 1.4× and 1.25× adjustment respectively.',
                 },
               ].map((row) => (
                 <li

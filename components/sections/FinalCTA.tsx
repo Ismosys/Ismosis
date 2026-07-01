@@ -55,8 +55,8 @@ export default function FinalCTA() {
           {[
             { k: 'Response', v: 'Within 24 hours' },
             { k: 'NDA', v: 'Signed on request' },
-            { k: 'Delivery', v: '5 to 7 business days' },
-            { k: 'Rush', v: '48 to 72 hours' },
+            { k: 'Delivery', v: '5–7 business days' },
+            { k: 'Rush', v: '48–72 hours' },
           ].map((item) => (
             <div key={item.k}>
               <div className="text-[10.5px] uppercase tracking-eyebrow text-paper/45">

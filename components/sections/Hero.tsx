@@ -1,8 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { motion, useReducedMotion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import HeroAssembly from '../illustrations/HeroAssembly';
+import { Stagger, StaggerItem } from '../Stagger';
 import { EASE } from '@/lib/motion';
 
 const TRUST = [
@@ -14,17 +16,31 @@ const TRUST = [
 
 export default function Hero() {
   const reduce = useReducedMotion();
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  const figureY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -28]);
 
   return (
-    <section className="relative border-b border-line">
-      <div className="container-page pt-14 md:pt-24 pb-16 md:pb-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-          <div className="lg:col-span-7">
+    <section ref={sectionRef} className="relative border-b border-line overflow-hidden">
+      {/* Blueprint background, full-bleed */}
+      <div className="absolute inset-0 blueprint-grid pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 blueprint-grid-major pointer-events-none" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-paper via-paper/85 to-transparent pointer-events-none"
+        aria-hidden="true"
+      />
+
+      <div className="container-page relative pt-14 md:pt-24 pb-16 md:pb-0 lg:pb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-stretch">
+          <div className="lg:col-span-6 lg:pb-28 self-end">
             <motion.div
               initial={reduce ? { opacity: 0 } : { opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="eyebrow eyebrow-line"
+              className="eyebrow eyebrow-line eyebrow-accent"
             >
               Patent Illustration Studio
             </motion.div>
@@ -70,47 +86,47 @@ export default function Hero() {
               </Link>
             </motion.div>
 
-            <motion.ul
-              initial={reduce ? { opacity: 0 } : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.45 }}
+            <Stagger
+              as="ul"
               className="mt-12 grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-3"
             >
               {TRUST.map((item) => (
-                <li key={item} className="flex items-center gap-2.5">
+                <StaggerItem key={item} as="li" y={8} className="flex items-center gap-2.5">
                   <span className="inline-block h-px w-3 bg-ink" />
                   <span className="text-[12.5px] uppercase tracking-eyebrow text-ink font-medium">
                     {item}
                   </span>
-                </li>
+                </StaggerItem>
               ))}
-            </motion.ul>
+            </Stagger>
           </div>
 
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-            className="lg:col-span-5"
+            className="relative lg:col-span-6 lg:mr-[calc(50%-50vw)]"
           >
-            <div className="relative border border-line bg-paper-warm aspect-[9/8] tech-corners">
-              <div className="absolute inset-0 grid-overlay opacity-50" />
-              <HeroAssembly className="absolute inset-0 w-full h-full text-ink p-4" />
+            <motion.div
+              style={{ y: figureY }}
+              className="relative h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[660px] border-y border-l border-line bg-paper-warm tech-corners overflow-hidden"
+            >
+              <div className="absolute inset-0 grid-overlay opacity-50" aria-hidden="true" />
+              <div className="absolute inset-0 blueprint-grid opacity-60" aria-hidden="true" />
+              <HeroAssembly className="absolute inset-0 w-full h-full text-ink p-6 md:p-12" />
 
-              <div className="absolute top-3 right-3 flex items-center gap-2 text-[10px] uppercase tracking-eyebrow text-ink-muted">
-                <span className="h-1.5 w-1.5 rounded-full bg-navy" />
-                Studio Sample
+              <div className="absolute top-4 left-5 right-5 flex items-center justify-between text-[10px] uppercase tracking-eyebrow text-ink-muted">
+                <span className="font-medium text-ink">FIG. 1 / Drive Assembly</span>
+                <span className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-navy" />
+                  Studio Sample
+                </span>
               </div>
-              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[10px] uppercase tracking-eyebrow text-ink-muted">
+              <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between text-[10px] uppercase tracking-eyebrow text-ink-muted">
                 <span>Sheet 1 / 4</span>
-                <span>Inked / 0.5pt</span>
+                <span>Black line / 0.4pt</span>
               </div>
-            </div>
-
-            <div className="mt-4 flex items-center justify-between text-[11px] tracking-eyebrow uppercase text-ink-muted">
-              <span>FIG. 1 / Drive Assembly</span>
-              <span>Black line / 0.4pt</span>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

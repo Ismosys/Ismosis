@@ -73,7 +73,7 @@ export default function ContactPage() {
                 <div className="pt-8 border-t border-line">
                   <div className="eyebrow eyebrow-line">Confidentiality</div>
                   <p className="mt-4 text-[14.5px] leading-relaxed text-ink-muted max-w-sm">
-                    A mutual non disclosure agreement is signed before any disclosure
+                    A mutual non-disclosure agreement is signed before any disclosure
                     material is reviewed. Standard or custom NDAs are accepted.
                   </p>
                 </div>

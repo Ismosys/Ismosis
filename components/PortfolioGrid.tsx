@@ -37,7 +37,7 @@ export default function PortfolioGrid() {
               <button
                 key={f.id}
                 onClick={() => setFilter(f.id)}
-                className={`h-9 px-4 text-[13px] font-medium tracking-[-0.005em] border transition-all duration-200 ${
+                className={`h-9 px-4 text-[13px] font-medium tracking-[-0.005em] border transition-all duration-200 focus-ring ${
                   isActive
                     ? 'bg-ink text-paper border-ink'
                     : 'bg-paper text-ink-muted border-line-strong hover:text-ink hover:border-ink'
@@ -68,7 +68,7 @@ export default function PortfolioGrid() {
               >
                 <button
                   onClick={() => setActive(item)}
-                  className="group block w-full text-left border border-line bg-paper transition-colors duration-300 hover:border-ink"
+                  className="group block w-full text-left border border-line bg-paper transition-[transform,border-color] duration-300 ease-precise hover:border-ink hover:-translate-y-0.5 active:translate-y-0 focus-ring"
                 >
                   <div className="relative aspect-[5/4] overflow-hidden bg-paper">
                     <div className="absolute inset-0 grid-overlay opacity-30 pointer-events-none z-10" />
@@ -125,7 +125,7 @@ export default function PortfolioGrid() {
             >
               <button
                 onClick={() => setActive(null)}
-                className="absolute top-4 right-4 z-10 inline-flex items-center justify-center h-9 w-9 border border-line-strong bg-paper text-ink hover:bg-ink hover:text-paper transition-colors"
+                className="absolute top-4 right-4 z-10 inline-flex items-center justify-center h-9 w-9 border border-line-strong bg-paper text-ink hover:bg-ink hover:text-paper transition-colors focus-ring"
                 aria-label="Close"
               >
                 <svg viewBox="0 0 14 14" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.5">

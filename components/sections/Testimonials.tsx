@@ -1,4 +1,5 @@
 import Reveal from '../Reveal';
+import { Stagger, StaggerItem } from '../Stagger';
 
 const TESTIMONIALS = [
   {
@@ -24,7 +25,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      'We use Ismosis for design patent work on consumer hardware. The seven view sets are reliably accurate and on time.',
+      'We use Ismosis for design patent work on consumer hardware. The seven-view sets are reliably accurate and on time.',
     name: 'Erin Kwon',
     role: 'Director of IP Strategy',
     org: 'Field Industrial',
@@ -42,12 +43,11 @@ export default function Testimonials() {
           </h2>
         </Reveal>
 
-        <ul className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-px bg-line border border-line">
-          {TESTIMONIALS.map((t, i) => (
-            <Reveal
+        <Stagger as="ul" className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-px bg-line border border-line">
+          {TESTIMONIALS.map((t) => (
+            <StaggerItem
               key={t.name}
               as="li"
-              delay={(i % 2) * 0.06}
               className="bg-paper p-8 md:p-10"
             >
               <svg
@@ -72,9 +72,9 @@ export default function Testimonials() {
                   {t.org}
                 </div>
               </div>
-            </Reveal>
+            </StaggerItem>
           ))}
-        </ul>
+        </Stagger>
       </div>
     </section>
   );

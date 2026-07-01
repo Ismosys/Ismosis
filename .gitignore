@@ -6,3 +6,7 @@ out
 *.log
 next-env.d.ts
 .vercel
+
+# Local Claude Code settings and TypeScript build cache
+.claude/settings.local.json
+tsconfig.tsbuildinfo

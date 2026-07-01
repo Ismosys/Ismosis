@@ -45,7 +45,7 @@ export default function AboutPage() {
                 <p>
                   Communication is direct. There are no account managers between the
                   inventor and the work. Revisions are part of standard scope. Confidential
-                  material is treated as such, and a non disclosure agreement is signed
+                  material is treated as such, and a non-disclosure agreement is signed
                   before any disclosure is shared.
                 </p>
               </div>

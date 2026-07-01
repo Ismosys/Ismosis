@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Reveal from '../Reveal';
+import { Stagger, StaggerItem } from '../Stagger';
 import {
   IconUtility,
   IconDesign,
@@ -31,7 +32,7 @@ const SERVICES = [
     no: '03',
     title: 'Patent Figure Redrawing',
     description:
-      'Cleanup and reformatting of existing figures rejected for line weight, clarity, or formatting non compliance.',
+      'Cleanup and reformatting of existing figures rejected for line weight, clarity, or formatting non-compliance.',
     Icon: IconRedraw,
   },
   {
@@ -39,7 +40,7 @@ const SERVICES = [
     no: '04',
     title: 'CAD to Patent Illustration',
     description:
-      'Conversion of STEP, IGES, and SolidWorks files into clean two dimensional patent figures with selected callouts.',
+      'Conversion of STEP, IGES, and SolidWorks files into clean two-dimensional patent figures with selected callouts.',
     Icon: IconCAD,
   },
   {
@@ -79,17 +80,16 @@ export default function Services() {
           </Reveal>
         </div>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-line">
-          {SERVICES.map(({ id, no, title, description, Icon }, i) => (
-            <Reveal
+        <Stagger as="ul" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-line">
+          {SERVICES.map(({ id, no, title, description, Icon }) => (
+            <StaggerItem
               key={id}
               as="li"
-              delay={(i % 3) * 0.05}
               className="group relative border-r border-b border-line"
             >
               <Link
                 href={`/services#${id}`}
-                className="block p-7 md:p-9 h-full transition-colors duration-300 hover:bg-paper-warm"
+                className="block p-7 md:p-9 h-full transition-colors duration-300 hover:bg-paper-warm focus-ring"
               >
                 <div className="flex items-start justify-between">
                   <span className="font-mono text-[11px] tracking-wider text-ink-muted">
@@ -118,9 +118,9 @@ export default function Services() {
                   </svg>
                 </div>
               </Link>
-            </Reveal>
+            </StaggerItem>
           ))}
-        </ul>
+        </Stagger>
       </div>
     </section>
   );

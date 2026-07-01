@@ -23,7 +23,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     type: 'Utility',
     src: '/portfolio/quadruped-body.png',
     description:
-      'Perspective view of a four legged robotic platform with articulated leg assemblies, modular battery compartment, and removable head mounted sensor pod. Drafted from CAD reference for the primary disclosure figure.',
+      'Perspective view of a four-legged robotic platform with articulated leg assemblies, modular battery compartment, and removable head-mounted sensor pod. Drafted from CAD reference for the primary disclosure figure.',
     application: 'Robotics / Mobility',
     views: 'Single perspective',
     method: 'CAD to line art',
@@ -37,7 +37,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     type: 'Utility',
     src: '/portfolio/quadruped-sensor.png',
     description:
-      'Magnified detail callout of the spine mounted sensor strip, paired with the parent quadruped figure. Detail boundary uses a dashed circular leader to a phantom enlargement, a standard USPTO convention for inset views.',
+      'Magnified detail callout of the spine-mounted sensor strip, paired with the parent quadruped figure. Detail boundary uses a dashed circular leader to a phantom enlargement, a standard USPTO convention for inset views.',
     application: 'Robotics / Sensors',
     views: 'Perspective with detail enlargement',
     method: 'CAD to line art',
@@ -51,7 +51,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     type: 'Utility',
     src: '/portfolio/planetary-rover.png',
     description:
-      'Three orientations of a six wheel mobile rover with rocker bogie suspension, mast mounted instrumentation, and arm assembly. Comparative views establish proportions across the disclosure on a single sheet.',
+      'Three orientations of a six-wheel mobile rover with rocker-bogie suspension, mast-mounted instrumentation, and arm assembly. Comparative views establish proportions across the disclosure on a single sheet.',
     application: 'Aerospace / Mobility',
     views: 'Three perspective orientations',
     method: 'Reference photographs to line art',
@@ -65,7 +65,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     type: 'Utility',
     src: '/portfolio/launch-vehicle.png',
     description:
-      'Isometric figure of a multi stage launch vehicle accompanied by two orthographic engine cluster views. The lower figures resolve nozzle arrangement that is otherwise occluded in the perspective.',
+      'Isometric figure of a multi-stage launch vehicle accompanied by two orthographic engine cluster views. The lower figures resolve nozzle arrangement that is otherwise occluded in the perspective.',
     application: 'Aerospace / Propulsion',
     views: 'One perspective, two orthographic',
     method: 'Sketch to line art',
@@ -79,9 +79,9 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     type: 'Utility',
     src: '/portfolio/toroidal-coil.png',
     description:
-      'Cross sectional perspective of a toroidal coil structure showing layered winding bands and internal channel geometry. Drawn to emphasize the curvature continuity required by the claim language.',
+      'Cross-sectional perspective of a toroidal coil structure showing layered winding bands and internal channel geometry. Drawn to emphasize the curvature continuity required by the claim language.',
     application: 'Industrial / Energy',
-    views: 'Cross sectional perspective',
+    views: 'Cross-sectional perspective',
     method: 'CAD to line art',
     delivery: 'PDF + PNG',
   },

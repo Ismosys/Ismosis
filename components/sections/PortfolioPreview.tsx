@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '../Reveal';
+import { Stagger, StaggerItem } from '../Stagger';
 import { PORTFOLIO_ITEMS } from '@/lib/portfolio';
 
 const FEATURED_IDS = [
@@ -44,12 +45,12 @@ export default function PortfolioPreview() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <Stagger className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           {featured.map((item, i) => (
-            <Reveal key={item.id} delay={i * 0.04} className={SPANS[i]}>
+            <StaggerItem key={item.id} className={SPANS[i]}>
               <Link
                 href="/portfolio"
-                className="group relative block overflow-hidden border border-line bg-paper aspect-[5/4] transition-colors duration-300 hover:border-ink"
+                className="group relative block overflow-hidden border border-line bg-paper aspect-[5/4] transition-[transform,border-color] duration-300 ease-precise hover:border-ink hover:-translate-y-0.5 active:translate-y-0 focus-ring"
               >
                 <div className="absolute inset-0 grid-overlay opacity-30 z-10 pointer-events-none transition-opacity duration-500 group-hover:opacity-15" />
                 <Image
@@ -80,9 +81,9 @@ export default function PortfolioPreview() {
                   </span>
                 </div>
               </Link>
-            </Reveal>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

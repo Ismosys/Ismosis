@@ -38,7 +38,7 @@ export default function Navigation() {
       }`}
     >
       <div className="container-page flex h-16 md:h-[72px] items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 group" aria-label="Ismosis home">
+        <Link href="/" className="flex items-center gap-2.5 group focus-ring" aria-label="Ismosis home">
           <Logo className="h-[22px] w-auto text-ink" />
           <span className="font-display text-[16px] tracking-tight font-medium text-ink">
             Ismosis
@@ -52,13 +52,13 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative px-3.5 py-2 text-[13.5px] font-medium tracking-[-0.005em] transition-colors duration-200 ${
+                className={`relative px-3.5 py-2 text-[13.5px] font-medium tracking-[-0.005em] transition-colors duration-200 focus-ring ${
                   active ? 'text-ink' : 'text-ink-muted hover:text-ink'
                 }`}
               >
                 {item.label}
                 {active && (
-                  <span className="absolute left-3.5 right-3.5 -bottom-[18px] h-px bg-ink hidden lg:block" />
+                  <span className="absolute left-3.5 right-3.5 -bottom-[18px] h-px bg-navy hidden lg:block" />
                 )}
               </Link>
             );
@@ -74,7 +74,7 @@ export default function Navigation() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex items-center justify-center h-10 w-10 -mr-2 text-ink"
+            className="lg:hidden inline-flex items-center justify-center h-10 w-10 -mr-2 text-ink focus-ring"
             aria-label="Toggle menu"
             aria-expanded={open}
           >
@@ -107,7 +107,7 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center justify-between py-3.5 border-b border-line-soft last:border-b-0 text-[15px] ${
+                  className={`flex items-center justify-between py-3.5 border-b border-line-soft last:border-b-0 text-[15px] focus-ring ${
                     active ? 'text-ink font-medium' : 'text-ink-muted'
                   }`}
                 >

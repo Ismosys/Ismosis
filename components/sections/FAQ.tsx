@@ -12,23 +12,23 @@ const FAQS = [
   },
   {
     q: 'How long does delivery take?',
-    a: 'Most projects deliver first drafts within five to seven business days based on figure count and complexity. Rush schedules of 48 to 72 hours are available when filing dates require them.',
+    a: 'Most projects deliver first drafts within five to seven business days based on figure count and complexity. Rush schedules of 48–72 hours are available when filing dates require them.',
   },
   {
     q: 'Do you sign NDAs?',
-    a: 'Yes. A mutual non disclosure agreement is signed before sharing any disclosure materials. Standard agreements are accepted and custom agreements are reviewed without delay.',
+    a: 'Yes. A mutual non-disclosure agreement is signed before sharing any disclosure materials. Standard agreements are accepted and custom agreements are reviewed without delay.',
   },
   {
     q: 'Can you redraw rough sketches?',
-    a: 'Yes. Pencil sketches, whiteboard photos, and napkin level concepts are routinely turned into compliant figures. Verbal callouts during a short review call are welcome if helpful.',
+    a: 'Yes. Pencil sketches, whiteboard photos, and napkin-level concepts are routinely turned into compliant figures. Verbal callouts during a short review call are welcome if helpful.',
   },
   {
     q: 'Do you support design patents?',
-    a: 'Yes. Standard seven view design patent sets are prepared with proper broken lines, contour treatment, and surface shading suited to ornamental claims.',
+    a: 'Yes. Standard seven-view design patent sets are prepared with proper broken lines, contour treatment, and surface shading suited to ornamental claims.',
   },
   {
     q: 'What file formats are delivered?',
-    a: 'Final delivery includes a single PDF formatted to USPTO sheet specifications and high resolution PNG exports of each figure. Editable source files are provided on request.',
+    a: 'Final delivery includes a single PDF formatted to USPTO sheet specifications and high-resolution PNG exports of each figure. Editable source files are provided on request.',
   },
 ];
 

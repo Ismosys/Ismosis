@@ -13,7 +13,7 @@ const PROJECT_TYPES = [
   'Other',
 ];
 
-const TIMELINE = ['Standard (5 to 7 days)', 'Rush (48 to 72 hours)', 'Flexible'];
+const TIMELINE = ['Standard (5–7 days)', 'Rush (48–72 hours)', 'Flexible'];
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);

@@ -35,7 +35,7 @@ const SERVICES = [
     no: '02',
     title: 'Design Patent Drawings',
     summary:
-      'Standard seven view sets prepared for ornamental claims, with broken lines and contour treatment that examiners expect.',
+      'Standard seven-view sets prepared for ornamental claims, with broken lines and contour treatment that examiners expect.',
     points: [
       'Front, rear, top, bottom, left, right, and perspective views',
       'Broken lines for unclaimed environment',
@@ -50,7 +50,7 @@ const SERVICES = [
     summary:
       'Existing figures that received office action objections are rebuilt to comply with line weight, clarity, and view requirements.',
     points: [
-      'Cleanup of low resolution or inconsistent linework',
+      'Cleanup of low-resolution or inconsistent linework',
       'Reformat to sheet specifications and margins',
       'Resolution of objection items in the response window',
     ],
@@ -61,7 +61,7 @@ const SERVICES = [
     no: '04',
     title: 'CAD to Patent Illustration',
     summary:
-      'Three dimensional CAD models converted into clean two dimensional figures that retain the essential geometry of the disclosure.',
+      'Three-dimensional CAD models converted into clean two-dimensional figures that retain the essential geometry of the disclosure.',
     points: [
       'STEP, IGES, SLDPRT, X_T, 3MF accepted',
       'Hidden lines, section views, and exploded views',
